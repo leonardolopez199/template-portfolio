@@ -1,0 +1,204 @@
+:root {
+    --clr-background: #000009;
+    --clr-bar: #00004a;
+    --clr-name: #2b4363;
+    --clr-active: #000080;
+    --clr-lightgray: #f3f3f3;
+    --clr-facebook: #0077b5;
+    --clr-github: #fff;
+
+    --ff-primary: "Roboto", sans-serif;
+    --ff-accent: "Playfair Display", serif;
+}
+
+*,
+*::a5ter,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+body {
+    color: #fff;
+    background: var(--clr-background);
+    font-family: var(--ff-primary);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    background-color: var(--clr-bar);
+    color: #fff;
+    margin-bottom: 2.5%;
+}
+.nav-links a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+    font-size: 32px;
+    color: #fff;
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: var(--clr-name);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-img {
+    max-width: 70%;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split > * + * {
+        margin-left: 2em;
+    }
+
+    
+}
+
+.text-center {
+    text-align: center;
+}
+
+.name-color {
+    color: var(--clr-name);
+}
+
+footer {
+    margin-top: 10px;
+    background-color: var(--clr-bar);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-lightgray);
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+@media (max-width: 40em) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: var(--clr-bar);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 2px;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: var(--clr-name);
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type="checkbox"]:checked ~ .menu {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 35px;
+        transform: translateX(35%);
+    }
+    .person-img{
+        display: none;
+    }
+}
+
+.btns {
+    margin-top: 20px;
+}
+
+.btn {
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.linkedin {
+    color: var(--clr-facebook);
+    border: solid var(--clr-facebook);
+}
+
+.github {
+    color: var(--clr-github);
+    border: solid var(--clr-github);
+}
+
+.i-link {
+    width: 120px;
+}
+
+.i-git {
+    width: 120px;
+}
+
+.home-text {
+    margin-left: 25%;
+}
+
+section{
+    margin-bottom: 70px;
+}
