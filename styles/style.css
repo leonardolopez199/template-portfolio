@@ -95,22 +95,6 @@ img {
     max-width: 70%;
 }
 
-@media (min-width: 40em) {
-    .split {
-        flex-direction: row;
-    }
-
-    .split > * {
-        flex-basis: 100%;
-    }
-
-    .split > * + * {
-        margin-left: 2em;
-    }
-
-    
-}
-
 .text-center {
     text-align: center;
 }
@@ -139,10 +123,128 @@ input[type="checkbox"] {
     user-select: none;
 }
 
+.btns {
+    margin-top: 20px;
+}
+
+.btn {
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.linkedin {
+    color: var(--clr-facebook);
+    border: solid var(--clr-facebook);
+}
+
+.github {
+    color: var(--clr-github);
+    border: solid var(--clr-github);
+}
+
+.curriculum {
+    color: var(--clr-github);
+    border: solid var(--clr-github);
+}
+
+.i-link {
+    width: 20%;
+}
+
+.i-git {
+    width: 20%;
+}
+
+.i-curriculum {
+    width: 20%;
+}
+
+.home-text {
+    margin-left: 30%;
+}
+
+section {
+    margin-top: 55px;
+    margin-bottom: 35px;
+}
+
+#home {
+    margin-top: 120px;
+}
+
+.aboutme-text {
+    margin-top: 1.5%;
+    max-width: 50%;
+}
+
+.div-img-aboutme {
+    max-width: 35%;
+}
+
+.img-aboutme {
+    float: right;
+    margin-right: 5%;
+}
+
+.experiences-list ul {
+    list-style: none;    
+    text-align: center;
+    width: 48%;
+    float: right;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.title-exp{
+    float: right;
+}
+
+.experiences-list ul li {    
+    border-left: 3.5px solid white;
+}
+
+.selected {
+    border-left: 3.5px solid blue !important;
+    background-color: #eeeeee54;
+}
+
+.experiences-list{
+    float: right;
+    max-width: 25%;
+}
+
+.experience-info{
+    max-width: 60%;
+}
+
+.experience-date{
+    width: 100%;
+    height: 40px;
+}
+
+.div-title{
+    width: 100%;
+    height: 50px;
+}
+h4{
+    margin: 10px 0;
+    float: right;
+    color: var(--clr-name);
+}
+
+@media (max-width: 900px) {
+    .btn-text {
+        display: none;
+    }
+}
+
 @media (max-width: 40em) {
     .menu {
         display: none;
-        position: absolute;
+        position: fixed;
         background-color: var(--clr-bar);
         right: 0;
         left: 0;
@@ -169,48 +271,35 @@ input[type="checkbox"] {
         top: 35px;
         transform: translateX(35%);
     }
-    .person-img{
+    .person-img {
         display: none;
+    }
+
+    .div-img-aboutme {
+        text-align: center;
+    }
+
+    .aboutme-text {
+        max-width: 100%;
+    }
+    .div-img-aboutme {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-.btns {
-    margin-top: 20px;
-}
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
 
-.btn {
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
-    margin: 0 5px;
-}
+    .split > * {
+        flex-basis: 100%;
+    }
 
-.linkedin {
-    color: var(--clr-facebook);
-    border: solid var(--clr-facebook);
-}
-
-.github {
-    color: var(--clr-github);
-    border: solid var(--clr-github);
-}
-
-.i-link {
-    width: 120px;
-}
-
-.i-git {
-    width: 120px;
-}
-
-.home-text {
-    margin-left: 25%;
-}
-
-section{
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-
-#home{
-    margin-top: 120px;
+    .split > * + * {
+        margin-left: 2em;
+    }
 }
