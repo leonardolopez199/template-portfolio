@@ -111,6 +111,7 @@ footer {
     justify-content: center;
     color: var(--clr-lightgray);
     padding: 10px;
+    height: 30px;
 }
 
 input[type="checkbox"] {
@@ -188,21 +189,21 @@ section {
 }
 
 .experiences-list ul {
-    list-style: none;    
+    list-style: none;
     text-align: center;
     width: 48%;
     float: right;
 }
 
-.title{
+.title {
     margin-bottom: 20px;
 }
 
-.title-exp{
+.title-exp {
     float: right;
 }
 
-.experiences-list ul li {    
+.experiences-list ul li {
     border-left: 3.5px solid white;
 }
 
@@ -211,28 +212,60 @@ section {
     background-color: #eeeeee54;
 }
 
-.experiences-list{
+.experiences-list {
     float: right;
     max-width: 25%;
 }
 
-.experience-info{
+.experiences-info {
     max-width: 60%;
 }
 
-.experience-date{
+.experience-date {
     width: 100%;
     height: 40px;
 }
 
-.div-title{
+.div-title {
     width: 100%;
     height: 50px;
 }
-h4{
+
+h4 {
     margin: 10px 0;
     float: right;
     color: var(--clr-name);
+}
+
+.select-experiences {
+    display: none;
+}
+
+.card {
+    max-width: 25%;
+    border: 2px solid var(--clr-active);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cards {
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.empty-card {
+    width: 33%;
+    padding: 10px;
+}
+
+.title-projects {
+    width: 50%;
+    justify-content: center;
+    display: grid;
+}
+
+h3 {
+    margin: 8px 0;
 }
 
 @media (max-width: 900px) {
@@ -287,6 +320,42 @@ h4{
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .select-experiences {
+        display: block;
+        width: 100%;
+        height: 30px;
+        border: 2px solid var(--clr-active);
+        background-color: #14141a;
+        color: var(--clr-lightgray);
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    .ul-experiences {
+        display: none;
+    }
+
+    .experiences-list {
+        max-width: 100%;
+    }
+
+    .experiences-info {
+        max-width: 100%;
+    }
+
+    .title-exp {
+        float: left;
+    }
+    .card {
+        margin-bottom: 15px;
+        max-width: 90%;
+    }
+
+    .empty-card {
+        width: 33%;
+        padding: 10px;
+        display: none;
     }
 }
 
