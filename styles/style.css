@@ -6,6 +6,7 @@
     --clr-lightgray: #f3f3f3;
     --clr-facebook: #0077b5;
     --clr-github: #fff;
+    --clr-background-active: #eeeeee54;
 
     --ff-primary: "Roboto", sans-serif;
     --ff-accent: "Playfair Display", serif;
@@ -17,8 +18,7 @@
     box-sizing: border-box;
 }
 
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -49,6 +49,56 @@ ul {
     padding: 0;
 }
 
+section::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 120px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: var(--clr-bar);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-lightgray);
+    padding: 10px;
+    height: 30px;
+    font-size: 10px;
+    border-top: 2px solid var(--clr-name);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+h3 {
+    margin: 8px 0;
+}
+
+h4 {
+    margin: 10px 0;
+    float: right;
+    color: var(--clr-name);
+}
+
+section {
+    margin-top: 55px;
+    margin-bottom: 35px;
+}
+
+#home {
+    margin-top: 120px;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -57,44 +107,37 @@ ul {
     background-color: var(--clr-bar);
     color: #fff;
     margin: auto;
-    margin-bottom: 2.5%;    
+    margin-bottom: 2.5%;
+    border-bottom: 2px solid var(--clr-name);
 }
-
-section::before{ 
-    display: block; 
-    content: " "; 
-    margin-top: -100px; 
-    height: 120px; 
-    visibility: hidden; 
-    pointer-events: none;
-  }
 
 .nav-links a {
     color: #fff;
 }
-/* LOGO */
+
 .logo {
     font-size: 32px;
     color: #fff;
 }
-/* NAVBAR MENU */
+
 .menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
 }
+
 .menu li:hover {
     background-color: var(--clr-name);
     border-radius: 5px;
     transition: 0.3s ease;
 }
+
 .menu li {
     padding: 5px 14px;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+.menu li a {
+    text-decoration: none;
 }
 
 .container {
@@ -117,21 +160,6 @@ img {
 
 .name-color {
     color: var(--clr-name);
-}
-
-footer {
-    margin-top: 10px;
-    background-color: var(--clr-bar);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--clr-lightgray);
-    padding: 10px;
-    height: 30px;
-}
-
-input[type="checkbox"] {
-    display: none;
 }
 
 .hamburger {
@@ -165,29 +193,14 @@ input[type="checkbox"] {
     border: solid var(--clr-github);
 }
 
-.i-link {
-    width: 20%;
-}
-
-.i-git {
-    width: 20%;
-}
-
+.i-link,
+.i-git,
 .i-curriculum {
     width: 20%;
 }
 
 .home-text {
     margin-left: 30%;
-}
-
-section {
-    margin-top: 55px;
-    margin-bottom: 35px;
-}
-
-#home {
-    margin-top: 120px;
 }
 
 .aboutme-text {
@@ -226,7 +239,7 @@ section {
 
 .selected {
     border-left: 3.5px solid blue !important;
-    background-color: #eeeeee54;
+    background-color: var(--clr-background-active);
 }
 
 .experiences-list {
@@ -246,12 +259,6 @@ section {
 .div-title {
     width: 100%;
     height: 50px;
-}
-
-h4 {
-    margin: 10px 0;
-    float: right;
-    color: var(--clr-name);
 }
 
 .select-experiences {
@@ -281,16 +288,11 @@ h4 {
     display: grid;
 }
 
-
 .second-experience,
 .third-experience,
 .fourth-experience,
-.fifth-experience{
-    display:none
-}
-
-h3 {
-    margin: 8px 0;
+.fifth-experience {
+    display: none;
 }
 
 @media (max-width: 900px) {
@@ -298,6 +300,13 @@ h3 {
         display: none;
     }
 }
+
+@media (max-width: 1100px) {
+    .btn-text-c {
+        display: none;
+    }
+}
+
 
 @media (max-width: 40em) {
     .menu {
@@ -308,27 +317,33 @@ h3 {
         left: 0;
         text-align: center;
         padding: 16px 0;
-        margin-top: 2px;
+        margin-top: 15px;
     }
+
     .menu li:hover {
         display: inline-block;
         background-color: var(--clr-name);
         transition: 0.3s ease;
     }
+
     .menu li + li {
         margin-top: 12px;
     }
+
     input[type="checkbox"]:checked ~ .menu {
         display: block;
     }
+
     .hamburger {
         display: block;
     }
+
     .dropdown {
         left: 50%;
         top: 35px;
-        transform: translateX(35%);
+        transform: translateX(45%);
     }
+
     .person-img {
         display: none;
     }
@@ -340,12 +355,14 @@ h3 {
     .aboutme-text {
         max-width: 100%;
     }
+
     .div-img-aboutme {
         max-width: 100%;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .select-experiences {
         display: block;
         width: 100%;
@@ -372,6 +389,7 @@ h3 {
     .title-exp {
         float: left;
     }
+
     .card {
         margin-bottom: 15px;
         max-width: 90%;
