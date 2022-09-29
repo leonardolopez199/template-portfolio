@@ -1,5 +1,7 @@
 # Template portfolio
 
-This project aims to design from 0 a template for a personal portfolio.
+In this repository created a template of a portfolio from 0.
 
-This project was developed with HTML, CSS and JS.
+For the creation of this template I used HTML, CSS and JS, without any help framework.
+
+This project also provides a responsive one.
